@@ -11,7 +11,7 @@ public class MyArrayListQueue<T> {
         queue.add(element);
     }
 
-    //equeue method that removes and returns the front element of the queue using the remove method
+    //enqueue method that removes and returns the front element of the queue using the remove method
     public void dequeue(T element){
         if(isEmpty()){
             throw new EmptyStackException();
