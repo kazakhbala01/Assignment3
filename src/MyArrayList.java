@@ -29,15 +29,13 @@ public class MyArrayList<T> implements MyList<T>{
         }
     }
 
-    public void addFirst(T item){
-        if(size == arr.length){
-            T[] newArr = (T[]) new Object[arr.length*2];
-            for(int i=1; i< arr.length; i++){
-                newArr[i]=arr[i];
-            }
-            arr = newArr;
-        }
-        arr[0]=item;
+   public boolean isEmpty(){
+        return size==0;
+   }
+    public T removeFirst(){
+        T element=(T) arr[0];
+        remove(1);
+        return element;
     }
 
     // Method to get the number of elements in the list
