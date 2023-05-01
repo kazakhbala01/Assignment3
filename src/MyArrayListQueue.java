@@ -16,6 +16,12 @@ public class MyArrayListQueue<T> {
 
     //peek method that returns first element of queue using get method
     public T peek(){
-
+        return queue.get(0);
     }
+
+    //method that returns true or false if queue is empty or not respectively
+    public boolean isEmpty(){
+        return queue.isEmpty();
+    }
+
 }
