@@ -24,7 +24,11 @@ public class MyArrayListStack<T> {
         return stack.get(1);
     }
 
+    // isEmpty method that returns true if the stack is empty or false if it is not using the isEmpty method
     public boolean isEmpty(){
         return stack.isEmpty();
     }
+    //getSize method that returns the number of elements in the stack using the size method for
+    public int getSize(){
+    return stack.size();}
 }
