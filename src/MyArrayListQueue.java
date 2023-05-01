@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 public class MyArrayListQueue<T> {
     private MyArrayList<T> queue;
@@ -11,6 +12,9 @@ public class MyArrayListQueue<T> {
 
     //equeue method that removes and returns the front element of the queue using the remove method
     public void dequeue(T element){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
         queue.remove(0);
     }
 
