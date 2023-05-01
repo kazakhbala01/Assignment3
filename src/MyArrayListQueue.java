@@ -8,4 +8,10 @@ public class MyArrayListQueue<T> {
     public void enqueue(T element){
         queue.add(element);
     }
+
+    //equeue method that removes and returns the front element of the queue using the remove method
+    public void dequeue(T element){
+        queue.remove(0);
+    }
+
 }
