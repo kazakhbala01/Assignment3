@@ -29,9 +29,12 @@ public class MyArrayList<T> implements MyList<T>{
         }
     }
 
+    //checks if whether array is empty or not
    public boolean isEmpty(){
         return size==0;
    }
+
+   //method that removes first element of array
     public T removeFirst(){
         T element=(T) arr[0];
         remove(1);
