@@ -14,4 +14,8 @@ public class MyArrayListQueue<T> {
         queue.remove(0);
     }
 
+    //peek method that returns first element of queue using get method
+    public T peek(){
+
+    }
 }
