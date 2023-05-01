@@ -5,5 +5,7 @@ public class MyArrayListQueue<T> {
         queue=new MyArrayList<>();
     }
     //enqueue method that adds an element to the back of the queue using the add method
-    public void enqueue(){}
+    public void enqueue(T element){
+        queue.add(element);
+    }
 }
