@@ -29,6 +29,17 @@ public class MyArrayList<T> implements MyList<T>{
         }
     }
 
+    public void addFirst(T item){
+        if(size == arr.length){
+            T[] newArr = (T[]) new Object[arr.length*2];
+            for(int i=1; i< arr.length; i++){
+                newArr[i]=arr[i];
+            }
+            arr = newArr;
+        }
+        arr[0]=item;
+    }
+
     // Method to get the number of elements in the list
     @Override
     public int size() {
