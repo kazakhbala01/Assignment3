@@ -53,13 +53,56 @@ public class MyArrayListStack<T> {
 #### 8 Implement the isEmpty method that returns true if the stack is empty or false if it is not using the isEmpty method for MyLinkedList or MyArrayList.
 #### 9 Implement the size method that returns the number of elements in the stack using the size method for MyLinkedList or MyArrayList.
 
-## 5 task create push method
+# MyArrayListQueue
+### I had to create
 
-## solution
+#### Create a new class named MyLinkedListQueue for the MyLinkedList implementation or MyArrayListQueue for the MyArrayList implementation.
+#### Import the necessary classes: java.util.NoSuchElementException for the queue exceptions, and MyLinkedList or MyArrayList from the previous tasks.
+#### Declare an instance variable of type MyLinkedList or MyArrayList inside the class.
+#### Create a constructor for the class and initialize the instance variable.
+#### Implement the enqueue method that adds an element to the back of the queue using the addLast method for MyLinkedList or add method for MyArrayList.
+#### Implement the dequeue method that removes and returns the front element of the queue using the removeFirst method for MyLinkedList or remove method for MyArrayList.
+#### Implement the peek method that returns the front element of the queue without removing it using the getFirst method for MyLinkedList or get method for MyArrayList.
+#### Implement the isEmpty method that returns true if the queue is empty or false if it is not using the isEmpty method for MyLinkedList or MyArrayList.
+#### Implement the size method that returns the number of elements in the queue using the size method for MyLinkedList or MyArrayList.
+
+# Solution
+
 ```java
- // push method that adds an element to the top of the stack using the addFirst method for MyArrayList
+import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 
-    public void push(T element){
-        stack.add(element);
+public class MyArrayListQueue<T> {
+    private MyArrayList<T> queue;
+    public MyArrayListQueue(){
+        queue=new MyArrayList<>();
     }
+    //enqueue method that adds an element to the back of the queue using the add method
+    public void enqueue(T element){
+        queue.add(element);
+    }
+
+    //equeue method that removes and returns the front element of the queue using the remove method
+    public void dequeue(T element){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        queue.remove(0);
+    }
+
+    //peek method that returns first element of queue using get method
+    public T peek(){
+        return queue.get(0);
+    }
+
+    //method that returns true or false if queue is empty or not respectively
+    public boolean isEmpty(){
+        return queue.isEmpty();
+    }
+
+    //size method that returns size of queue
+    public int size() {
+        return queue.size();
+    }
+}
 ```
